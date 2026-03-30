@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 
 from domani_photo_search.config.settings import settings
 
@@ -11,6 +12,9 @@ RANKER_INSTRUCTIONS = """
 Если уверенного совпадения нет, верни пустой массив ranked_items и reason=no_confident_match.
 Ответ только JSON.
 """.strip()
+
+
+logger = logging.getLogger(__name__)
 
 
 class RankingService:
@@ -52,7 +56,11 @@ class RankingService:
             )
             raw = response.output_text.strip()
             payload = json.loads(raw)
-        except Exception:
+        except Exception as exc:
+            logger.warning(
+                "llm_ranking_failed",
+                extra={"request_id": request_id, "model": model, "error_type": exc.__class__.__name__},
+            )
             return self._fallback(request_id, model, shortlist, top_n, "llm_error_fallback")
 
         shortlist_ids = {item["photo_id"] for item in shortlist}

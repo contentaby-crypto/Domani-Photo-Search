@@ -1,3 +1,14 @@
+install:
+	pip install -e .
+
+format:
+	python -m compileall -q src tests
+
+lint:
+	python -m compileall -q src
+
+check: lint test
+
 ingest:
 	python scripts/ingest_csv.py
 
