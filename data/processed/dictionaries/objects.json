@@ -1,0 +1,822 @@
+[
+  {
+    "object_id": "OBJ-0001",
+    "canonical_name": "depo пентхаус",
+    "display_name": "81. DEPO Пентхаус",
+    "aliases": [
+      "depo пентхаус"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0002",
+    "canonical_name": "мицкевич татарская 8",
+    "display_name": "83. Мицкевич. Татарская 8",
+    "aliases": [
+      "мицкевич татарская 8",
+      "татарская 8"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0003",
+    "canonical_name": "партнеры мск",
+    "display_name": "85. Партнеры МСК",
+    "aliases": [
+      "партнеры мск"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0004",
+    "canonical_name": "кононов юхновка",
+    "display_name": "84. Кононов. Юхновка",
+    "aliases": [
+      "кононов юхновка",
+      "юхновка"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0005",
+    "canonical_name": "гобрацевич олимпик",
+    "display_name": "82. Гобрацевич. Олимпик",
+    "aliases": [
+      "гобрацевич олимпик",
+      "олимпик"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0006",
+    "canonical_name": "игнатьев квартира",
+    "display_name": "71. Игнатьев. Квартира",
+    "aliases": [
+      "игнатьев квартира"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0007",
+    "canonical_name": "фоменко престижино",
+    "display_name": "77. Фоменко. Престижино",
+    "aliases": [
+      "престижино",
+      "фоменко престижино"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0008",
+    "canonical_name": "олимпик бичейко",
+    "display_name": "80. Олимпик. Бичейко",
+    "aliases": [
+      "бичейко",
+      "олимпик бичейко"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0009",
+    "canonical_name": "воропаевская 15",
+    "display_name": "74. Воропаевская 15",
+    "aliases": [
+      "воропаевская 15"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0010",
+    "canonical_name": "игнатьев офис",
+    "display_name": "72. Игнатьев. Офис",
+    "aliases": [
+      "игнатьев офис"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0011",
+    "canonical_name": "зел гавань мицкевич",
+    "display_name": "79. Зел. Гавань. Мицкевич",
+    "aliases": [
+      "гавань мицкевич",
+      "зел гавань мицкевич",
+      "мицкевич"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0012",
+    "canonical_name": "фоменко маяк",
+    "display_name": "76. Фоменко. Маяк",
+    "aliases": [
+      "маяк",
+      "фоменко маяк"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0013",
+    "canonical_name": "липки",
+    "display_name": "75. Липки",
+    "aliases": [
+      "липки"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0014",
+    "canonical_name": "татарская 8",
+    "display_name": "78. Татарская 8",
+    "aliases": [
+      "татарская 8"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0015",
+    "canonical_name": "комплекс победителей",
+    "display_name": "61. Комплекс Победителей",
+    "aliases": [
+      "комплекс победителей",
+      "победителей"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0016",
+    "canonical_name": "авиационная",
+    "display_name": "69. Авиационная",
+    "aliases": [
+      "авиационная"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0017",
+    "canonical_name": "офис протос",
+    "display_name": "63. Офис Протос",
+    "aliases": [
+      "офис протос",
+      "протос"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0018",
+    "canonical_name": "ратомская 16",
+    "display_name": "66. Ратомская 16",
+    "aliases": [
+      "ратомская 16"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0019",
+    "canonical_name": "цна сергеев",
+    "display_name": "70. Цна. Сергеев",
+    "aliases": [
+      "сергеев",
+      "цна сергеев"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0020",
+    "canonical_name": "depo",
+    "display_name": "73. DEPO",
+    "aliases": [
+      "depo"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0021",
+    "canonical_name": "ратомская роше",
+    "display_name": "67. Ратомская. Роше",
+    "aliases": [
+      "ратомская роше",
+      "роше"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0022",
+    "canonical_name": "зеленая гавань 98",
+    "display_name": "62. Зеленая Гавань 98",
+    "aliases": [
+      "гавань 98",
+      "зеленая гавань 98"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0023",
+    "canonical_name": "панфилова 3",
+    "display_name": "65. Панфилова 3",
+    "aliases": [
+      "панфилова 3"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0024",
+    "canonical_name": "dark house",
+    "display_name": "68. Dark House",
+    "aliases": [
+      "dark house",
+      "house"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0025",
+    "canonical_name": "объект без адреса",
+    "display_name": "64. Объект без адреса",
+    "aliases": [
+      "адреса",
+      "без адреса",
+      "объект без адреса"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0026",
+    "canonical_name": "любань",
+    "display_name": "60. Любань",
+    "aliases": [
+      "любань"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0027",
+    "canonical_name": "дом монтерей",
+    "display_name": "56. Дом Монтерей",
+    "aliases": [
+      "дом монтерей",
+      "монтерей"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0028",
+    "canonical_name": "освобождения 9а",
+    "display_name": "58. Освобождения 9А",
+    "aliases": [
+      "освобождения 9а"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0029",
+    "canonical_name": "зеленя гавань 99",
+    "display_name": "54. Зеленя Гавань 99",
+    "aliases": [
+      "гавань 99",
+      "зеленя гавань 99"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0030",
+    "canonical_name": "зимянина 89",
+    "display_name": "55. Зимянина 89",
+    "aliases": [
+      "зимянина 89"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0031",
+    "canonical_name": "без адреса 3",
+    "display_name": "57. Без адреса 3",
+    "aliases": [
+      "адреса 3",
+      "без адреса 3"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0032",
+    "canonical_name": "зел гавань офис",
+    "display_name": "59. Зел.Гавань. Офис",
+    "aliases": [
+      "зел гавань офис"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0033",
+    "canonical_name": "без адреса 2",
+    "display_name": "52. Без адреса 2",
+    "aliases": [
+      "адреса 2",
+      "без адреса 2"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0034",
+    "canonical_name": "васнецова 33",
+    "display_name": "53. Васнецова 33",
+    "aliases": [
+      "васнецова 33"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0035",
+    "canonical_name": "пирс булатая",
+    "display_name": "45. Пирс. Булатая",
+    "aliases": [
+      "булатая",
+      "пирс булатая"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0036",
+    "canonical_name": "дзержинского 19-457",
+    "display_name": "49. Дзержинского 19-457",
+    "aliases": [
+      "19-457",
+      "дзержинского 19-457"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0037",
+    "canonical_name": "братьев райт 89",
+    "display_name": "50. Братьев райт 89",
+    "aliases": [
+      "братьев райт 89",
+      "райт 89"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0038",
+    "canonical_name": "морской риф",
+    "display_name": "42. Морской риф",
+    "aliases": [
+      "морской риф"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0039",
+    "canonical_name": "независимости славянский квартал",
+    "display_name": "47. Независимости. Славянский квартал",
+    "aliases": [
+      "квартал",
+      "независимости славянский квартал",
+      "славянский квартал"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0040",
+    "canonical_name": "пирс фото",
+    "display_name": "44. Пирс, фото",
+    "aliases": [
+      "пирс фото"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0041",
+    "canonical_name": "зеленая гавань березовая алеея",
+    "display_name": "43. Зеленая гавань. Березовая Алеея",
+    "aliases": [
+      "алеея",
+      "березовая алеея",
+      "зеленая гавань березовая алеея"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0042",
+    "canonical_name": "жк _славянский_ г минск",
+    "display_name": "41. ЖК _Славянский_ г.Минск",
+    "aliases": [
+      "г минск",
+      "жк _славянский_ г минск",
+      "минск"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0043",
+    "canonical_name": "короля 18",
+    "display_name": "48. Короля 18",
+    "aliases": [
+      "короля 18"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0044",
+    "canonical_name": "боровляны университетская",
+    "display_name": "46. Боровляны. Университетская",
+    "aliases": [
+      "боровляны университетская",
+      "университетская"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0045",
+    "canonical_name": "комплекс с гардеробной стеклянной",
+    "display_name": "32. Комплекс с гардеробной стеклянной",
+    "aliases": [
+      "гардеробной стеклянной",
+      "комплекс с гардеробной стеклянной",
+      "стеклянной"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0046",
+    "canonical_name": "ратомская 30",
+    "display_name": "37. Ратомская 30",
+    "aliases": [
+      "ратомская 30"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0047",
+    "canonical_name": "тв гардероб",
+    "display_name": "39. ТВ+гардероб",
+    "aliases": [
+      "гардероб",
+      "тв гардероб"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0048",
+    "canonical_name": "комплекс",
+    "display_name": "38. Комплекс",
+    "aliases": [
+      "комплекс"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0049",
+    "canonical_name": "марьяливо",
+    "display_name": "31. Марьяливо",
+    "aliases": [
+      "марьяливо"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0050",
+    "canonical_name": "ратомская",
+    "display_name": "35. Ратомская",
+    "aliases": [
+      "ратомская"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0051",
+    "canonical_name": "престижино",
+    "display_name": "34. Престижино",
+    "aliases": [
+      "престижино"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0052",
+    "canonical_name": "туровского 22",
+    "display_name": "40. Туровского 22",
+    "aliases": [
+      "туровского 22"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0053",
+    "canonical_name": "пирс",
+    "display_name": "36. Пирс",
+    "aliases": [
+      "пирс"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0054",
+    "canonical_name": "победителей d3 - игнатьев",
+    "display_name": "24. Победителей D3 - Игнатьев",
+    "aliases": [
+      "- игнатьев",
+      "игнатьев",
+      "победителей d3 - игнатьев"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0055",
+    "canonical_name": "загородный дом - худяковы",
+    "display_name": "28. Загородный дом - Худяковы",
+    "aliases": [
+      "- худяковы",
+      "загородный дом - худяковы",
+      "худяковы"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0056",
+    "canonical_name": "брайтья райт",
+    "display_name": "27. Брайтья райт",
+    "aliases": [
+      "брайтья райт",
+      "райт"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0057",
+    "canonical_name": "мстиславца vae",
+    "display_name": "30. Мстиславца VAE",
+    "aliases": [
+      "мстиславца vae"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0058",
+    "canonical_name": "ратомская диана",
+    "display_name": "29. Ратомская (Диана)",
+    "aliases": [
+      "диана",
+      "ратомская диана"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0059",
+    "canonical_name": "фото от егора независимости",
+    "display_name": "25. Фото от Егора(Независимости)",
+    "aliases": [
+      "егора независимости",
+      "независимости",
+      "фото от егора независимости"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0060",
+    "canonical_name": "vae house",
+    "display_name": "33. VAE HOUSE",
+    "aliases": [
+      "house",
+      "vae house"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0061",
+    "canonical_name": "рядом с военкоматом",
+    "display_name": "22. Рядом с военкоматом",
+    "aliases": [
+      "военкоматом",
+      "рядом с военкоматом",
+      "с военкоматом"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0062",
+    "canonical_name": "карла маркса",
+    "display_name": "21. Карла Маркса",
+    "aliases": [
+      "карла маркса",
+      "маркса"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0063",
+    "canonical_name": "мястровская",
+    "display_name": "23. Мястровская",
+    "aliases": [
+      "мястровская"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0064",
+    "canonical_name": "независимости",
+    "display_name": "26. Независимости",
+    "aliases": [
+      "независимости"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0065",
+    "canonical_name": "филимонова vae",
+    "display_name": "16. Филимонова VAE",
+    "aliases": [
+      "филимонова vae"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0066",
+    "canonical_name": "ясная поляна комплекс",
+    "display_name": "18. Ясная Поляна комплекс",
+    "aliases": [
+      "комплекс",
+      "поляна комплекс",
+      "ясная поляна комплекс"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0067",
+    "canonical_name": "новая боровая комплекс мицкевич",
+    "display_name": "20. Новая Боровая Комплекс Мицкевич",
+    "aliases": [
+      "комплекс мицкевич",
+      "мицкевич",
+      "новая боровая комплекс мицкевич"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0068",
+    "canonical_name": "туровского 18 мебель",
+    "display_name": "15. Туровского 18 Мебель",
+    "aliases": [
+      "18 мебель",
+      "мебель",
+      "туровского 18 мебель"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0069",
+    "canonical_name": "никитина кухня",
+    "display_name": "14. Никитина Кухня",
+    "aliases": [
+      "никитина кухня"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0070",
+    "canonical_name": "объект с мебелью",
+    "display_name": "11. Объект с мебелью",
+    "aliases": [
+      "мебелью",
+      "объект с мебелью",
+      "с мебелью"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0071",
+    "canonical_name": "жк парус vae комплекс",
+    "display_name": "19. ЖК Парус VAE комплекс",
+    "aliases": [
+      "vae комплекс",
+      "жк парус vae комплекс",
+      "комплекс"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0072",
+    "canonical_name": "ратомская комплекс",
+    "display_name": "17. Ратомская комплекс",
+    "aliases": [
+      "комплекс",
+      "ратомская комплекс"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0073",
+    "canonical_name": "филимонова мебель",
+    "display_name": "12. Филимонова Мебель",
+    "aliases": [
+      "мебель",
+      "филимонова мебель"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0074",
+    "canonical_name": "борисов мебель",
+    "display_name": "13. Борисов Мебель",
+    "aliases": [
+      "борисов мебель",
+      "мебель"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0075",
+    "canonical_name": "независимости 13 кухня",
+    "display_name": "3. Независимости 13 (кухня)",
+    "aliases": [
+      "независимости 13 кухня"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0076",
+    "canonical_name": "корш саблина 3 кухня мебель",
+    "display_name": "2. Корш Саблина 3 ( кухня + мебель)",
+    "aliases": [
+      "корш саблина 3 кухня мебель",
+      "мебель"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0077",
+    "canonical_name": "воронянского n кухня",
+    "display_name": "1. Воронянского N (кухня)",
+    "aliases": [
+      "воронянского n кухня"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0078",
+    "canonical_name": "игуменский тракт 16",
+    "display_name": "5. Игуменский тракт 16",
+    "aliases": [
+      "игуменский тракт 16",
+      "тракт 16"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0079",
+    "canonical_name": "туровского 18-113",
+    "display_name": "6. Туровского 18-113",
+    "aliases": [
+      "18-113",
+      "туровского 18-113"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0080",
+    "canonical_name": "гродно",
+    "display_name": "10. Гродно",
+    "aliases": [
+      "гродно"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0081",
+    "canonical_name": "победителей 133-105 кухня",
+    "display_name": "4. Победителей 133-105 (кухня)",
+    "aliases": [
+      "победителей 133-105 кухня"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0082",
+    "canonical_name": "филимонова 20 2 кухня и мебель",
+    "display_name": "7. Филимонова 20 №2 (кухня и мебель)",
+    "aliases": [
+      "и мебель",
+      "мебель",
+      "филимонова 20 2 кухня и мебель"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0083",
+    "canonical_name": "жодино кухня",
+    "display_name": "9. Жодино(кухня)",
+    "aliases": [
+      "жодино кухня"
+    ],
+    "is_active": true
+  },
+  {
+    "object_id": "OBJ-0084",
+    "canonical_name": "богдановича 52а кухня мебель",
+    "display_name": "8. Богдановича 52А ( кухня + мебель)",
+    "aliases": [
+      "богдановича 52а кухня мебель",
+      "мебель"
+    ],
+    "is_active": true
+  }
+]

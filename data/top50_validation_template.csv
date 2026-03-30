@@ -1,0 +1,6 @@
+case_id,query_text,normalized_query_expected,normalized_query_actual,shortlist_ok,top10_ok,wrong_object_leak,comments,action_items
+TC-01,Найди серую кухню,,,,,,,
+TC-02,Была на квартире у Игнатьева,,,,,,,
+TC-03,Найди серую кухню. Была на квартире у Игнатьева,,,,,,,
+TC-04,Покажи Japandi, гостиная, светлые тона,,,,,,,
+TC-05,Нужен крупный план дерева на кухне,,,,,,,
