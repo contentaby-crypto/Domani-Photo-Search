@@ -1,42 +1,82 @@
-# Domani Photo Search — Stage 5 hardening & deployment
+# Domani Photo Search MVP
 
-Stage 5 добавляет production hardening поверх Stage 4:
-- Dockerfile и docker-compose для локального запуска;
-- GitHub Actions CI;
-- SQLite query history для audit trail и callback flow;
-- admin reindex endpoint и CLI;
-- реальные Telegram callbacks `send_all` и `refine`;
-- шаблон ручной валидации top-50 эталонных запросов.
+MVP-сервис поиска по фотобазе Domani для Telegram-бота.
+
+## Цель
+
+Система принимает свободный текстовый запрос на русском языке, детерминированно отбирает shortlist по словарям и индексам, а затем использует ChatGPT 5.4 только для финального ранжирования shortlist.
+
+Ключевой принцип проекта:
+
+**deterministic shortlist -> LLM ranking -> Telegram delivery**
+
+## Что входит в bootstrap
+
+- базовая структура репозитория под Codex;
+- конфигурация Python-проекта через `pyproject.toml`;
+- `.env.example` с обязательными переменными окружения;
+- `Makefile` с основными командами разработки;
+- папки и заглушки для модулей `bot`, `search`, `llm`, `indexing`, `api`;
+- папки для словарей, данных, тестов и скриптов;
+- инженерные документы Stage 1.
+
+## Предлагаемый стек
+
+- Python 3.12
+- FastAPI
+- Uvicorn
+- Pydantic v2
+- aiogram 3
+- httpx
+- pandas
+- rapidfuzz
+- orjson
+- structlog
+- pytest
 
 ## Быстрый старт
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .
 cp .env.example .env
-make ingest
-make test
+make install
+make check
 make run-api
 ```
 
-## Docker
+## Основные сценарии
 
-```bash
-docker compose up --build
-```
+1. Пользователь пишет запрос в Telegram.
+2. Бот отправляет текст в Search API.
+3. Search API нормализует запрос, считает deterministic score и формирует shortlist.
+4. Ranking service вызывает OpenAI только по shortlist.
+5. Бот отправляет пользователю top results или предлагает уточнение.
 
-## Основные endpoints
+## Структура проекта
 
-- `GET /health`
-- `POST /v1/search/query`
-- `POST /v1/ranking/rank`
-- `POST /v1/search/confirm-send-all`
-- `POST /v1/search/refine-hints`
-- `POST /admin/reindex`
-- `POST /telegram/webhook`
+См. файл `REPO_STRUCTURE.md`.
 
-## Query history
+## Документы проекта
 
-Каждый вызов `/v1/search/query` сохраняется в `data/processed/query_history.sqlite3`.
-Это используется для audit trail и для Telegram callback действий `send_all/refine`.
+- `ARCHITECTURE.md`
+- `DATA_MODEL.md`
+- `ENV_SPEC.md`
+- `TELEGRAM_INTEGRATION_SPEC.md`
+- `OPENAI_RANKING_PROMPT_SPEC.md`
+- `LOGGING_AND_MONITORING.md`
+- `INDEXING_RUNBOOK.md`
+- `TEST_PLAN.md`
+
+## Ограничения MVP
+
+- поиск не делается по всей базе через LLM;
+- LLM не может придумывать новые `photo_id`;
+- `photo_id` должен быть стабильным внутренним идентификатором;
+- при `shortlist_total > 10` бот не отправляет все фото автоматически.
+
+## Следующий шаг после bootstrap
+
+- реализовать ingest CSV;
+- собрать normalized dictionaries;
+- реализовать deterministic scoring engine;
+- подключить Telegram webhook;
+- подключить OpenAI ranking с JSON-ответом.
