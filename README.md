@@ -51,6 +51,14 @@ make run-api
 4. Ranking service вызывает OpenAI только по shortlist.
 5. Бот отправляет пользователю top results или предлагает уточнение.
 
+## Telegram callback flow (`send_all` / `refine`)
+
+- При `delivery_mode=ask_user` бот отправляет inline-кнопки с callback в формате `action:request_id:page`.
+- В callback `send_all` бот запрашивает `/v1/search/confirm-send-all` и отправляет карточки батчами.
+- В callback `refine` бот запрашивает `/v1/search/refine-hints` и показывает подсказки для уточнения.
+- Если `request_id` в callback отсутствует, бот использует последний запрос из `QueryHistoryStore` для текущей сессии Telegram.
+- Для `delivery_mode=direct` бот пытается вызвать `/v1/ranking/rank`; при любой ошибке ранжирования пользователю отправляются deterministic-результаты из shortlist (authoritative fallback).
+
 ## Структура проекта
 
 См. файл `REPO_STRUCTURE.md`.

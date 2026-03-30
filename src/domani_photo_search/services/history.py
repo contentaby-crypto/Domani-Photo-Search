@@ -100,3 +100,13 @@ class QueryHistoryStore:
                 "INSERT INTO event_history (request_id, event_type, payload_json) VALUES (?, ?, ?)",
                 (request_id, event_type, json.dumps(payload, ensure_ascii=False)),
             )
+
+    def get_latest_request_for_session(self, session_id: str) -> dict[str, Any] | None:
+        with self._connect() as conn:
+            row = conn.execute(
+                "SELECT request_id FROM query_history WHERE session_id = ? ORDER BY created_at DESC, rowid DESC LIMIT 1",
+                (session_id,),
+            ).fetchone()
+        if not row:
+            return None
+        return self.get_request(row[0])
