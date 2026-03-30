@@ -1,9 +1,12 @@
+from pathlib import Path
+
 from fastapi.testclient import TestClient
 
 from domani_photo_search.api.main import create_app
+from domani_photo_search.testing.sample_data import create_sample_csv
 
 
-def test_query_history_and_reindex(monkeypatch):
+def test_query_history_and_reindex(monkeypatch, tmp_path):
     app = create_app()
     client = TestClient(app)
 
@@ -23,6 +26,7 @@ def test_query_history_and_reindex(monkeypatch):
     assert stored is not None
     assert stored['query_text'] == 'Найди серую кухню'
 
-    reindex = client.post('/admin/reindex', json={}, headers={'x-admin-token': 'change-me'})
+    csv_path = create_sample_csv(tmp_path / "sample_photos.csv")
+    reindex = client.post('/admin/reindex', json={"csv_path": str(csv_path)}, headers={'x-admin-token': 'change-me'})
     assert reindex.status_code == 200
     assert reindex.json()['status'] == 'ok'

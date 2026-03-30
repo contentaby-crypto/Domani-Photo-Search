@@ -4,10 +4,11 @@ from fastapi.testclient import TestClient
 
 from domani_photo_search.api.main import create_app
 from domani_photo_search.indexing.ingest import ingest_csv
+from domani_photo_search.testing.sample_data import create_sample_csv
 
 
 def build_client(tmp_path: Path):
-    csv = Path('/mnt/data/База данных фото Domani - New (4).csv')
+    csv = create_sample_csv(tmp_path / "sample_photos.csv")
     ingest_csv(csv, tmp_path)
     app = create_app()
     app.state.search_engine = __import__('domani_photo_search.search.engine', fromlist=['SearchEngine']).SearchEngine(tmp_path / 'photos.jsonl', tmp_path / 'dictionaries')

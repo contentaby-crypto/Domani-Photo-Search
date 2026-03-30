@@ -1,25 +1,13 @@
 from __future__ import annotations
 
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from domani_photo_search.models.photo import PhotoCard
 from domani_photo_search.search.normalizer import QueryNormalizer
+from domani_photo_search.search.scoring import DEFAULT_SCORING_WEIGHTS
 from domani_photo_search.utils.io import read_jsonl
 from domani_photo_search.utils.text import normalize_text
-
-WEIGHTS = {
-    "object": 10,
-    "main_object": 7,
-    "secondary_object": 3,
-    "color": 5,
-    "color_group": 3,
-    "style": 4,
-    "material": 3,
-    "plan": 2,
-    "format": 2,
-    "composition": 2,
-}
 
 
 class SearchEngine:
@@ -48,53 +36,53 @@ class SearchEngine:
             if normalized.objects:
                 if not all(self._matches_object(card, obj) for obj in normalized.objects):
                     continue
-                score += WEIGHTS["object"] * len(normalized.objects)
+                score += DEFAULT_SCORING_WEIGHTS["object"] * len(normalized.objects)
                 matched_dicts.add("object_aliases")
                 hard_filters.extend([f"object={obj}" for obj in normalized.objects])
 
             for room in normalized.room_objects:
                 if room in card.main_objects:
-                    score += WEIGHTS["main_object"]
+                    score += DEFAULT_SCORING_WEIGHTS["main_object"]
                     matched_dicts.add("room_object_dict")
                     scoring_terms.append(room)
                 elif room in card.secondary_objects:
-                    score += WEIGHTS["secondary_object"]
+                    score += DEFAULT_SCORING_WEIGHTS["secondary_object"]
                     matched_dicts.add("room_object_dict")
                     scoring_terms.append(room)
 
             for color in normalized.colors:
                 if color in card.colors:
-                    score += WEIGHTS["color"]
+                    score += DEFAULT_SCORING_WEIGHTS["color"]
                     matched_dicts.add("color_dict")
                     scoring_terms.append(color)
             for group in normalized.color_groups:
                 if group in card.color_groups:
-                    score += WEIGHTS["color_group"]
+                    score += DEFAULT_SCORING_WEIGHTS["color_group"]
                     matched_dicts.add("color_dict")
                     scoring_terms.append(group)
             for style in normalized.style:
                 if style in card.style:
-                    score += WEIGHTS["style"]
+                    score += DEFAULT_SCORING_WEIGHTS["style"]
                     matched_dicts.add("style_dict")
                     scoring_terms.append(style)
             for material in normalized.material:
                 if material in card.material:
-                    score += WEIGHTS["material"]
+                    score += DEFAULT_SCORING_WEIGHTS["material"]
                     matched_dicts.add("material_dict")
                     scoring_terms.append(material)
             for plan in normalized.plan:
                 if plan == card.plan:
-                    score += WEIGHTS["plan"]
+                    score += DEFAULT_SCORING_WEIGHTS["plan"]
                     matched_dicts.add("plan_dict")
                     scoring_terms.append(plan)
             for fmt in normalized.format:
                 if fmt == card.format:
-                    score += WEIGHTS["format"]
+                    score += DEFAULT_SCORING_WEIGHTS["format"]
                     matched_dicts.add("format_dict")
                     scoring_terms.append(fmt)
             for composition in normalized.composition:
                 if composition in card.composition:
-                    score += WEIGHTS["composition"]
+                    score += DEFAULT_SCORING_WEIGHTS["composition"]
                     matched_dicts.add("composition_dict")
                     scoring_terms.append(composition)
 
@@ -151,7 +139,7 @@ class SearchEngine:
             "prompt_user_action": action,
             "shortlist": shortlist,
             "trace": {
-                "timestamp": datetime.now(UTC).isoformat(),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "matched_dictionaries": sorted(matched_dicts),
                 "hard_filters": list(dict.fromkeys(hard_filters)),
                 "scoring_terms": list(dict.fromkeys(scoring_terms)),
