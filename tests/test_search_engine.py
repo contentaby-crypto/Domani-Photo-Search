@@ -14,3 +14,14 @@ def test_search_engine_filters_by_object(tmp_path: Path):
 
     assert result['shortlist_total'] > 0
     assert all('depo' in item['object'].lower() for item in result['shortlist'])
+
+
+def test_search_engine_preserves_object_as_hard_filter_for_russian_variant(tmp_path: Path):
+    csv = create_sample_csv(tmp_path / "sample_photos.csv")
+    ingest_csv(csv, tmp_path)
+    engine = SearchEngine(tmp_path / "photos.jsonl", tmp_path / "dictionaries")
+
+    result = engine.search("Покажи у Игнатьевым светло-бежевую гостиную", top_k=20)
+
+    assert result["shortlist_total"] > 0
+    assert all("игнатьев" in item["object"].lower() for item in result["shortlist"])
