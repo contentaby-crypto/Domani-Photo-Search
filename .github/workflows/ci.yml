@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [main, develop]
   pull_request:
 
 jobs:
@@ -10,33 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Клонируем репозиторий
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      # 2. Ставим Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
-      # 3. Устанавливаем зависимости
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install poetry
-
-      # 4. Устанавливаем проект
       - name: Install project
         run: |
-          poetry install --no-interaction --no-root
+          python -m pip install --upgrade pip
+          pip install -e .
+          pip install pytest ruff
 
-      # 5. Линт (опционально, но полезно)
       - name: Lint
+        env:
+          PYTHONPATH: src
         run: |
-          poetry run ruff check .
+          ruff check .
 
-      # 6. Запуск тестов
       - name: Run tests
+        env:
+          PYTHONPATH: src
         run: |
-          poetry run pytest
+          pytest -q
